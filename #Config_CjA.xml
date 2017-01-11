@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+	<db>
+		<sgbd>mysqlt</sgbd>
+ 		<servidor>pratad01.cnj.jus.br</servidor>
+ 		<usuario>cja</usuario>
+ 		<senha>fVs4#141!a4</senha>
+ 		<banco>CJA</banco> 		 		
+	</db>
+</config>

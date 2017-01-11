@@ -1,0 +1,47 @@
+<script type="text/javascript" src="html/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="html/js/jquery/jquery-ui.js"></script>
+
+<!-- CKeditor -->
+<script type="text/javascript" src="bibliotecas/ckeditor/ckeditor.js"></script> 
+
+<style type="text/css" media="screen">			
+ 	@import "html/css/jquery/table_jui.css";
+</style> 
+
+{literal}
+	<script>
+		function fechaMsg(){
+			$('#msgSistema').hide()
+		}
+		
+		function abreAba(aba){
+			$('#myTab a[href="#tab'+aba+'"]').tab('show');
+		}
+		
+		if(window.ordenacao===undefined){
+			var ordenacao = 'asc';
+		}
+		
+		if(window.coluna===undefined){
+			var coluna = '0';
+		}
+		
+		$(document).ready(function(){
+			$(".display tr").mouseover(function(){
+				$(this).addClass("over")
+			});
+			$(".display tr").mouseout(function(){
+				$(this).removeClass("over")
+			});
+			
+			$('.display').dataTable( {
+				"bJQueryUI": true,
+				"sPaginationType": "full_numbers",
+				"aaSorting": [[coluna,ordenacao]],
+				"oLanguage": {
+					"sUrl": "html/js/jquery/pt_BR"
+				}
+			} );
+		} );
+	</script>
+{/literal}
